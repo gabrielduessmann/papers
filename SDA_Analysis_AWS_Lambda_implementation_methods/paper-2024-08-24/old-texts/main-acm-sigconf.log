@@ -3,11 +3,11 @@ entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**main.tex
-(./main.tex
+**main-acm-sigconf.tex
+(./main-acm-sigconf.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
-(./IEEEtran.cls
+(/usr/local/texlive/2024/texmf-dist/tex/latex/ieeetran/IEEEtran.cls
 Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
 -- See the "IEEEtran_HOWTO" manual for usage information.
 -- http://www.michaelshell.org/tex/ieeetran/
@@ -787,8 +787,9 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 85.
 )
 \Hy@SectionHShift=\skip60
-) (./main.aux)
-\openout1 = `main.aux'.
+)
+No file main-acm-sigconf.aux.
+\openout1 = `main-acm-sigconf.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
 LaTeX Font Info:    ... okay on input line 34.
@@ -808,7 +809,6 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 34.
 LaTeX Font Info:    ... okay on input line 34.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 34.
 LaTeX Font Info:    ... okay on input line 34.
-
 -- Lines per column: 56 (exact).
 (/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -833,25 +833,23 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 Package hyperref Info: Link coloring OFF on input line 34.
-
-(./main.out) (./main.out)
 \@outlinefile=\write4
-\openout4 = `main.out'.
+\openout4 = `main-acm-sigconf.out'.
 
 
 
 LaTeX Warning: Citation `Nupponen_2020_serverless_what_it_is' on page 1 undefin
-ed on input line 72.
+ed on input line 73.
 
 
-Underfull \hbox (badness 7030) in paragraph at lines 76--77
+Underfull \hbox (badness 7030) in paragraph at lines 77--78
 []\OT1/ptm/m/n/10 Ao com-parar o mod-elo \OT1/ptm/m/it/10 server-less \OT1/ptm/
 m/n/10 com aplica[][]oes
  []
 
 
 LaTeX Warning: Citation `aws_2020_supports_container_image' on page 1 undefined
- on input line 80.
+ on input line 83.
 
 [1{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/l
 ocal/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc}
@@ -859,80 +857,102 @@ ocal/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc}
 
 ]
 
+LaTeX Warning: Reference `sec:RefTeo' on page 2 undefined on input line 93.
+
+
+LaTeX Warning: Reference `sec:TrabRel' on page 2 undefined on input line 93.
+
+
+LaTeX Warning: Reference `sec:experiments' on page 2 undefined on input line 93
+.
+
+
+LaTeX Warning: Reference `sec:Conclusion' on page 2 undefined on input line 93.
+
+
+
+LaTeX Warning: Reference `subsec:aws_services' on page 2 undefined on input lin
+e 98.
+
+
 LaTeX Warning: Citation `nist_2011_cloud_computing' on page 2 undefined on inpu
-t line 99.
+t line 103.
 
 
 LaTeX Warning: Citation `vahidinia_2020_cold_start' on page 2 undefined on inpu
-t line 109.
+t line 113.
 
 
 LaTeX Warning: Citation `Raje_2023_cold_warm_start' on page 2 undefined on inpu
-t line 109.
+t line 113.
 
 
 LaTeX Warning: Citation `vahidinia_2020_cold_start' on page 2 undefined on inpu
-t line 111.
+t line 115.
 
 
 LaTeX Warning: Citation `kumari_2022_mitigating_cold_start' on page 2 undefined
- on input line 111.
+ on input line 115.
 
 
 LaTeX Warning: Citation `vahidinia_2023_mitigating_cold_start' on page 2 undefi
-ned on input line 111.
+ned on input line 115.
 
 
 LaTeX Warning: Citation `dantas_2022_reducing_cold_start' on page 2 undefined o
-n input line 111.
+n input line 115.
 
 
 LaTeX Warning: Citation `Siddiqui_2019_analysis_container' on page 2 undefined 
-on input line 116.
+on input line 120.
 
 
 LaTeX Warning: Citation `Siddiqui_2019_analysis_container' on page 2 undefined 
-on input line 118.
+on input line 122.
 
 [2]
 
 LaTeX Warning: Citation `scheepers_2014_virtualization_containerization' on pag
-e 3 undefined on input line 120.
+e 3 undefined on input line 124.
 
 
 LaTeX Warning: Citation `aws_2023_what_is_lambda' on page 3 undefined on input 
-line 130.
+line 134.
 
 
 LaTeX Warning: Citation `aws_2023_aws_lambda_architectures' on page 3 undefined
- on input line 137.
+ on input line 141.
 
 
-LaTeX Warning: Citation `aws_2023_aws_ecr' on page 3 undefined on input line 13
-9.
+LaTeX Warning: Citation `aws_2023_aws_ecr' on page 3 undefined on input line 14
+3.
 
 
 LaTeX Warning: Citation `aws_2023_what_is_api_gateway' on page 3 undefined on i
-nput line 141.
+nput line 145.
 
 
 LaTeX Warning: Citation `dantas_2022_reducing_cold_start' on page 3 undefined o
-n input line 148.
+n input line 152.
 
 
 LaTeX Warning: Citation `Elsakhawy_2021_performance_analysis_serverless' on pag
-e 3 undefined on input line 150.
+e 3 undefined on input line 154.
 
 
 LaTeX Warning: Citation `Villamizar_2017_cost_comparison_lambda' on page 3 unde
-fined on input line 152.
+fined on input line 156.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 160
+
+LaTeX Warning: Reference `tab:related_papers' on page 3 undefined on input line
+ 158.
+
+LaTeX Font Info:    Trying to load font information for U+msa on input line 165
 .
 (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 160
+LaTeX Font Info:    Trying to load font information for U+msb on input line 165
 .
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -940,110 +960,52 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 
 LaTeX Warning: Citation `dantas_2022_reducing_cold_start' on page 3 undefined o
-n input line 164.
+n input line 169.
 
 
 LaTeX Warning: Citation `Elsakhawy_2021_performance_analysis_serverless' on pag
-e 3 undefined on input line 166.
+e 3 undefined on input line 171.
 
 
 LaTeX Warning: Citation `Villamizar_2017_cost_comparison_lambda' on page 3 unde
-fined on input line 168.
+fined on input line 173.
 
 [3]
-<images/environment-diagram-PT.png, id=84, 841.1425pt x 451.6875pt>
-File: images/environment-diagram-PT.png Graphic file (type png)
-<use images/environment-diagram-PT.png>
-Package pdftex.def Info: images/environment-diagram-PT.png  used on input line 
-201.
-(pdftex.def)             Requested size: 252.0pt x 135.3212pt.
+
+LaTeX Warning: Reference `fig:env_diagram' on page 4 undefined on input line 20
+9.
 
 
-LaTeX Warning: Citation `aws_2023_ecr_pricing' on page 4 undefined on input lin
-e 213.
-
-<images/max-memory-use-PT.pdf, id=89, 752.8125pt x 465.74pt>
-File: images/max-memory-use-PT.pdf Graphic file (type pdf)
-<use images/max-memory-use-PT.pdf>
-Package pdftex.def Info: images/max-memory-use-PT.pdf  used on input line 224.
-(pdftex.def)             Requested size: 252.0pt x 155.90483pt.
-[4 <./images/environment-diagram-PT.png>]
-<images/max-memory-use-average-PT.pdf, id=98, 816.04875pt x 503.8825pt>
-File: images/max-memory-use-average-PT.pdf Graphic file (type pdf)
-<use images/max-memory-use-average-PT.pdf>
-Package pdftex.def Info: images/max-memory-use-average-PT.pdf  used on input li
-ne 232.
-(pdftex.def)             Requested size: 252.0pt x 155.60225pt.
-<images/init-time-PT.pdf, id=104, 684.5575pt x 423.5825pt>
-File: images/init-time-PT.pdf Graphic file (type pdf)
-<use images/init-time-PT.pdf>
-Package pdftex.def Info: images/init-time-PT.pdf  used on input line 247.
-(pdftex.def)             Requested size: 252.0pt x 155.92807pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-<images/init-time-average-PT.pdf, id=105, 638.385pt x 394.47375pt>
-File: images/init-time-average-PT.pdf Graphic file (type pdf)
-<use images/init-time-average-PT.pdf>
-Package pdftex.def Info: images/init-time-average-PT.pdf  used on input line 25
-5.
-(pdftex.def)             Requested size: 252.0pt x 155.7161pt.
- [5 <./images/max-memory-use-PT.pdf> <./images/max-memory-use-average-PT.pdf
-
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./images/max-memory-use-aver
-age-PT.pdf): PDF inclusion: multiple pdfs with page group included in a single 
-page
-> <./images/init-time-PT.pdf
-
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./images/init-time-PT.pdf): 
-PDF inclusion: multiple pdfs with page group included in a single page
-> <./images/init-time-average-PT.pdf
-
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./images/init-time-average-P
-T.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->]
-No file main.bbl.
-
-** Conference Paper **
-Before submitting the final camera ready copy, remember to:
-
- 1. Manually equalize the lengths of two columns on the last page
- of your paper;
-
- 2. Ensure that any PostScript and/or PDF output post-processing
- uses only Type 1 fonts and that every step in the generation
- process uses the appropriate paper size.
-
-[6
-
-] (./main.aux)
- ***********
-LaTeX2e <2023-11-01> patch level 1
-L3 programming layer <2024-02-20>
- ***********
+LaTeX Warning: File `images/environment-diagram-PT.png' not found on input line
+ 213.
 
 
-LaTeX Warning: There were undefined references.
+./main-acm-sigconf.tex:213: Package pdftex.def Error: File `images/environment-
+diagram-PT.png' not found: using draft setting.
 
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: B96E04E246B47D882FF7E387528CFBA2;1704.
- ) 
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.213 ...width]{images/environment-diagram-PT.png}
+                                                  
+? 
+./main-acm-sigconf.tex:213: Emergency stop.
+ ...                                              
+                                                  
+l.213 ...width]{images/environment-diagram-PT.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+ 
 Here is how much of TeX's memory you used:
- 22469 strings out of 474116
- 419794 string characters out of 5743682
- 1976187 words of memory out of 5000000
- 44408 multiletter control sequences out of 15000+600000
- 596568 words of font info for 105 fonts, out of 8000000 for 9000
+ 22405 strings out of 474116
+ 419242 string characters out of 5743682
+ 1973187 words of memory out of 5000000
+ 44367 multiletter control sequences out of 15000+600000
+ 594383 words of font info for 103 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,12n,93p,1237b,469s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/lo
-cal/texlive/2024/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texli
-ve/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2024/te
-xmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (6 pages, 236765 bytes).
-PDF statistics:
- 181 PDF objects out of 1000 (max. 8388607)
- 149 compressed objects within 2 object streams
- 26 named destinations out of 1000 (max. 500000)
- 142 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+ 84i,12n,93p,1376b,441s stack positions out of 10000i,1000n,20000p,200000b,200000s
+./main-acm-sigconf.tex:213:  ==> Fatal error occurred, no output PDF file produ
+ced!

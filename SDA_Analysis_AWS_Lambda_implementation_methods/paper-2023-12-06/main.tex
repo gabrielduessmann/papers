@@ -184,17 +184,23 @@ Para realizar a comparação das métricas, foi desenvolvido uma aplicação, im
 
 Primeiro é descrito o ambiente e configurações para simular os testes, e depois são apresentados os dados de comparação entre os modelos de implantação.
 
+\subsection{Aplicacação}
+\label{subsec:application}
+
+Para realizar os experimentos, uma aplicação simples na linguagem Java foi desenvolvida, na qual espera um entrada do usuário e retorna ao usuário. Mais especificamente, a entrada requisita uma cidade e retorna o horário atual no fuso horário local. Esse programa não tem o objetivo de executar algoritmos de alta complexidade, ou que demandasse alto poder computacional, pois o objetivo principal é avaliar o ambiente e não a aplicação.
+
+Para avaliar as duas maneiras de implantação desta aplicação na AWS Lambda, esta tiveram configurações distintas. Uma na qual foi gerado um arquivo executável JAR e compactado a pasta em formato ZIP. A outra foi feita com um arquivo adicional Dockerfile, para gerar um \texit{build} da imagem em contêiner.
 
 \subsection{Ambiente}
 \label{subsec:environment}
 
-Para realizar tal avaliação, foi realizada a implementação de uma aplicação simples utilizando a linguagem de programção Java, versão 11. A aplicação possui uma interface de entrada de dados onde deve ser informado uma região e retorna a data e o horário da região informada.
+O ambiente de configuração foi realizado exclusivamente na AWS, incluindo a implantação da aplicação e coleta das métricas para a análise.
 
-Para implementar a aplicação no serviço da AWS, foi criado uma função utilizando arquivo ZIP compactado e outra função via imagem de contêiner. Para criar a função com o uso da imagem, uma imagem da aplicação foi criada a partir de um Dockerfile configurado para realizar o \textit{build} e publicada no repositória do AWS ECR. Refente a arquitetura escolhida para as funções, foi escolhido a arquitetura arm64 devido ao menor preço.
+As aplicações foram implantadas como FaaS, A primeira implantação da aplicação se deu através de fazer o \textit{upload} da pasta ZIP com o projeto e arquivo executável. Para a segunda, foi realizado o \textit{pull} da imagem da aplicação da maquina local para o repositório da AWS ECR, e em seguida criada uma função \textit{serverless} vinculada a imagem de contêiner.
 
-Para acessar e chamar as funções criadas, foram criadas APIs públicas REST na Amazon API Gateway e configuradas para invocar as respectivas funções. A API de acesso omite qual foi o modelo de implantação utilizado para função, e portanto, os usuários finais não conseguem saber dos detalhes técnicos da implantação.
+Para acessar as funções criadas foram do ambiente do provedor, foram criadas APIs públicas REST na Amazon API Gateway e configuradas para invocar as respectivas funções, com \textit{endpoints} distintos. Com a API pública, o modelo de implantação das funções é omitido, e portanto o que os distingue é apenas o caminho do \textit{endpoint}.
 
-O ambiente configurado é representado no diagrama da Figura \ref{fig:env_diagram}. Inicialmente, um usuário faz uma chamada de requisição REST. A requisição é recebida pela API Gateway, que redireciona para a respectiva função \textit{serverless} criada. A função pode executar a aplicação implantada via arquivo compactado ZIP ou com uma imagem de contêiner armazenada no Amazon ECR. A função \textit{serverless} deve então retornar uma mensagem de resposta para o serviço de API Gateway, o qual direciona a mensagem para o usuário.
+O ambiente configurado é representado no diagrama da Figura \ref{fig:env_diagram}, onde inicialmente um usuário faz uma chamada de requisição REST. A requisição é recebida pela API Gateway, e redireciona para a respectiva função \textit{serverless} criada. A função pode executar a aplicação implantada via arquivo compactado ZIP ou com uma imagem de contêiner armazenada no Amazon ECR. Por fim, a função \textit{serverless} retorna o conteúdo da resposta para o serviço de API Gateway, no qual envia o pacote de retorno para o usuário, finalizando a requisição.
 
 \begin{figure}[H]
     \centering 
@@ -207,10 +213,13 @@ O ambiente configurado é representado no diagrama da Figura \ref{fig:env_diagra
 \subsection{Custo}
 \label{subsec:cost}
 
-Para executar todos os testes na AWS, não houve incidência de cobrança do provedor por ter sido utilizado apenas serviços e configurações no nível \textit{Free Tier}. Esse nível possibilita que clientes utilizem serviços de forma gratuita, desde que atendam as restrições existentes. Portanto, para comparar o custo entre as duas abordagens de implantação, são usados os valores base de precificação do provedor de nuvem AWS.
+Para montar o ambiente e executar todos os experimentos na AWS, não houve incidência de cobrança do provedor por ter sido utilizado apenas serviços e configurações de nível \textit{Free Tier}. Esse nível possibilita que clientes utilizem serviços de forma gratuita, desde que utilizem os recursos dentro das restrições existentes, como escolha de \textit{hardware} e quantidade de requisições. Portanto, para comparar o custo entre as duas abordagens de implantação, é utilizado estimativas com base nos valores precificação praticados pelo provedor.
 
-O custo para implantar e manter a função \textit{serverless} ativa é o mesmo, independente da abordagem escolhida. Outros fatores, como configuração de \textit{hardware} e localização do servidor podem impactar no valor final, mas estão fora do escopo deste trabalho.
-Ao fazer o \textit{upload} do projeto compactado, não há nenhuma cobrança para armazenar os arquivos. Porém, para disponibilizar uma imagem de contêiner na AWS ECR, há um custo, que é proporcional ao tamanho da imagem. A precificação na AWS ECR também varia dependendo da região \cite{aws_2023_ecr_pricing}. 
+O custo para criar uma função \textit{serverless}  é igual para ambas as abordagens. Apesar de outros fatores, como configuração de \textit{hardware} e localização do servidor, poderem impactar no valor final da AWS Lambda, não são considerados pois não são abrangidos no escopo deste trabalho.
+
+Por \textit{serverless} ser um modelo cobrado pela execução do programa, o custo pode ser calculado com base na quantidade de requisições recebidas, e tempo de execução da aplicação. Entretanto, essa comparação é desprezível para este trabalho, pois o número de requisições são iguais, e ambas as funções executam a mesma aplicação.
+
+A diferença de custo pode se dar pela escolha de armazenamento da aplicação. Ao fazer o \textit{upload} da pasta do projeto compactado em formato ZIP de até 10MB, é gratuito. Porém, para disponibilizar uma imagem de contêiner na AWS ECR, há um custo, proporcional ao tamanho da imagem, além disso, a precificação pode variar conforme a regiäo \cite{aws_2023_ecr_pricing}. 
 
 \subsection{Desempenho}
 \label{subsec:performance}
